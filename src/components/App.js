@@ -5,7 +5,8 @@ import Counter from './Counter'
 
 function mapStateToProps (state) {
   return {
-    value: state
+    value: state.value,
+    imageNumber: state.imageNumber
   }
 }
 

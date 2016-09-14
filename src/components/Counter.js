@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PictureChange from './PictureChange'
 
 class Counter extends Component {
   static propTypes = {
@@ -10,7 +11,7 @@ class Counter extends Component {
   render () {
     const { value, increment, decrement } = this.props
     return <div className='counter'>
-      <p className='buttons'>
+      <p className='button-container'>
         Clicked: {value} times
         {' '}
         <button onClick={increment}>
@@ -21,6 +22,7 @@ class Counter extends Component {
           -
         </button>
       </p>
+      <PictureChange {...this.props} />
     </div>
   }
 }
